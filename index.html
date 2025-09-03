@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nugget PM Store - Jual Private Message JKT48</title>
+
+    <meta name="description" content="Jual Private Message (PM) JKT48. Dapatkan chat, voice note, dan foto eksklusif dari oshi-mu. Proses pemesanan mudah, aman, dan terpercaya!.">
+    <meta name="keywords" content="JKT48, Private Message JKT48, PM JKT48, Jual PM JKT48, Nugget PM Store, Aralie JKT48, Nachia JKT48, Nala JKT48, Ribka JKT48, oshi, private message, viral">
+    <meta name="author" content="Nugget Store">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-website-url.com/">
+    <meta property="og:title" content="Nugget PM Store - Jual Private Message JKT48">
+    <meta property="og:description" content="Dapatkan pengalaman lebih dekat dengan oshi-mu! Chat, Voice Note, dan Foto eksklusif langsung dari member JKT48 favoritmu.">
+    <meta property="og:image" content="https://placehold.co/1200x630/111827/EC4899?text=Nugget+PM+Store+JKT48">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-website-url.com/">
+    <meta property="twitter:title" content="Nugget PM Store - Jual Private Message JKT48">
+    <meta property="twitter:description" content="Dapatkan pengalaman lebih dekat dengan oshi-mu! Chat, Voice Note, dan Foto eksklusif langsung dari member JKT48 favoritmu.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/111827/EC4899?text=Nugget+PM+Store+JKT48">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111827;
+            color: #f3f4f6;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(236, 72, 153, 0.5);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #ec4899, #8b5cf6);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
+        }
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ec4899;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d946ef;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            transition: transform 0.3s ease;
+        }
+        #cart-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 50;
+        }
+        #cart-count {
+            position: absolute;
+            top: -0.5rem;
+            right: -0.5rem;
+        }
+        #cart-sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <audio id="background-music" src="https://qu.ax/uGjrG.mp3" autoplay loop></audio>
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-1/2 right-1/4 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <header class="py-4 px-6 md:px-12 sticky top-0 z-40" style="background: rgba(17, 24, 39, 0.8); backdrop-filter: blur(10px);">
+        <nav class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold gradient-text">Nugget PM Store</h1>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#benefits" class="hover:text-pink-400 transition">Benefits</a>
+                <a href="#pricelist" class="hover:text-pink-400 transition">Pricelist</a>
+                <a href="#how-to-order" class="hover:text-pink-400 transition">Cara Pesan</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="#benefits" class="block py-2 text-center hover:bg-gray-700 rounded">Benefits</a>
+            <a href="#pricelist" class="block py-2 text-center hover:bg-gray-700 rounded">Pricelist</a>
+            <a href="#how-to-order" class="block py-2 text-center hover:bg-gray-700 rounded">Cara Pesan</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+        
+        <section class="text-center mb-20 fade-in-section">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+                Pricelist <span class="gradient-text">Private Message</span> JKT48
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                Dapatkan pengalaman lebih dekat dengan oshi-mu! Chat, Voice Note, dan Foto eksklusif langsung dari member JKT48 favoritmu.
+            </p>
+            <a href="#pricelist" class="btn-primary text-white font-bold py-3 px-8 rounded-full text-lg">
+                <i class="fas fa-shopping-cart mr-2"></i> Lihat Pricelist
+            </a>
+        </section>
+
+        <section id="benefits" class="mb-20 fade-in-section">
+            <h3 class="text-3xl font-bold text-center mb-10">Kenapa Pesan di Sini?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 text-center">
+                    <div class="text-5xl text-pink-400 mb-4"><i class="fas fa-check-circle"></i></div>
+                    <h4 class="text-xl font-semibold mb-2">Murah dan Berkualitas</h4>
+                    <p class="text-gray-300">nugget store menyediakan private message JKT48 dengan harga yang murah tetapi kualitas bukan kaleng kaleng!</p>
+                </div>
+                <div class="glass-card p-8 text-center">
+                    <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-camera-retro"></i></div>
+                    <h4 class="text-xl font-semibold mb-2">Kualitas HD</h4>
+                    <p class="text-gray-300">Foto yang dikirim memiliki kualitas lebih jernih dan HD! Jelas dan tidak buram.</p>
+                </div>
+                <div class="glass-card p-8 text-center">
+                    <div class="text-5xl text-indigo-400 mb-4"><i class="fas fa-shield-alt"></i></div>
+                    <h4 class="text-xl font-semibold mb-2">Terpercaya & Aman</h4>
+                    <p class="text-gray-300">Proses pemesanan via Whatsapp yang aman dan terjamin serta banyak bukti transaksi!. Transaksi mudah dengan GoPay atau Qris</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricelist" class="mb-20 fade-in-section">
+            <h3 class="text-3xl font-bold text-center mb-10">Pilih Member Favoritmu</h3>
+            <div id="member-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            </div>
+        </section>
+
+        <section id="how-to-order" class="fade-in-section">
+            <h3 class="text-3xl font-bold text-center mb-10">Cara Pemesanan</h3>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 rounded-full bg-pink-500/20 flex items-center justify-center text-3xl font-bold text-pink-400 border-2 border-pink-400 mb-4">1</div>
+                    <h4 class="text-xl font-semibold mb-2">Pilih Member</h4>
+                    <p class="text-gray-300">Klik 'Pesan Sekarang' pada member yang kamu inginkan & tambahkan ke keranjang.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 rounded-full bg-purple-500/20 flex items-center justify-center text-3xl font-bold text-purple-400 border-2 border-purple-400 mb-4">2</div>
+                    <h4 class="text-xl font-semibold mb-2">Buka Keranjang</h4>
+                    <p class="text-gray-300">Klik ikon keranjang di pojok kanan bawah, cek pesananmu, lalu klik 'Checkout'.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 rounded-full bg-indigo-500/20 flex items-center justify-center text-3xl font-bold text-indigo-400 border-2 border-indigo-400 mb-4">3</div>
+                    <h4 class="text-xl font-semibold mb-2">Kirim & Bayar</h4>
+                    <p class="text-gray-300">Kamu akan diarahkan ke WhatsApp dengan format pesanan. Kirim pesan & lakukan pembayaran via GoPay atau Qris.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900/50 py-8 mt-20">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2025 Nugget Store. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="https://wa.me/6283115376765" target="_blank" class="text-2xl hover:text-green-400 transition mx-3"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com/ibnuu1st" target="_blank" class="text-2xl hover:text-pink-400 transition mx-3"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="cart-button" class="w-16 h-16 rounded-full btn-primary text-white text-2xl flex items-center justify-center shadow-lg">
+        <i class="fas fa-shopping-bag"></i>
+        <span id="cart-count" class="w-6 h-6 rounded-full bg-red-500 text-sm font-bold flex items-center justify-center hidden">0</span>
+    </button>
+
+    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-full md:w-96 bg-gray-900 z-50 transform translate-x-full shadow-2xl p-6 flex flex-col">
+        <div class="flex justify-between items-center mb-6">
+            <h4 class="text-2xl font-bold">Keranjang Pesanan</h4>
+            <button id="close-cart" class="text-2xl hover:text-pink-400">&times;</button>
+        </div>
+        <div id="cart-items" class="flex-grow overflow-y-auto pr-2">
+            <p id="empty-cart-message" class="text-gray-400 text-center mt-8">Keranjangmu masih kosong...</p>
+        </div>
+        <div class="border-t border-gray-700 pt-4 mt-4">
+            <div class="flex justify-between items-center text-lg font-semibold mb-4">
+                <span>Total:</span>
+                <span id="cart-total">Rp 0</span>
+            </div>
+            <button id="checkout-button" class="w-full btn-primary text-white font-bold py-3 px-6 rounded-lg text-lg disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                <i class="fab fa-whatsapp mr-2"></i> Checkout via WhatsApp
+            </button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const members = [
+                { id: 1, name: 'Nina Tutachia', price: 7000, img: 'https://raw.githubusercontent.com/rullkagenou/RullzUploadArthur/main/uploads/2025-09-02/upload_1756829731902.jpg'},
+                { id: 2, name: 'Oline Manuel', price: 7000, img: 'https://raw.githubusercontent.com/varhadoffc/tourl/main/uploads/2025-09-02/upload_1756830194439.jpg' },
+                { id: 3, name: 'Shabilqis Naila', price: 7000, img: 'https://raw.githubusercontent.com/varhadoffc/tourl/main/uploads/2025-09-02/upload_1756830291710.jpg' },
+                { id: 4, name: 'Hillary Abigail', price: 7000, img: 'https://raw.githubusercontent.com/varhadoffc/tourl/main/uploads/2025-09-02/upload_1756830376110.jpg' },
+                { id: 5, name: 'Michelle Levia', price: 7000, img: 'https://raw.githubusercontent.com/varhadoffc/tourl/main/uploads/2025-09-02/upload_1756830535912.jpg' },
+                { id: 6, name: 'Victoria Kimberly', price: 7000, img: 'https://raw.githubusercontent.com/varhadoffc/tourl/main/uploads/2025-09-02/upload_1756831055221.jpg' },
+                { id: 7, name: 'Ribka Budiman', price: 7000, img: 'https://raw.githubusercontent.com/varhadoffc/tourl/main/uploads/2025-09-02/upload_1756830050710.jpg' },
+                { id: 8, name: 'Jazzlyn Trisha', price: 7000, img: 'https://raw.githubusercontent.com/varhadoffc/tourl/main/uploads/2025-09-02/upload_1756830131808.jpg' },
+                { id: 9, name: 'Catherina Vallencia', price: 7000, img: 'https://raw.githubusercontent.com/varhadoffc/tourl/main/uploads/2025-09-02/upload_1756831615813.jpg' },
+                { id: 10, name: 'Nayla Suji', price: 7000, img: 'https://raw.githubusercontent.com/varhadoffc/tourl/main/uploads/2025-09-02/upload_1756831473612.jpg' },
+                { id: 10, name: 'Abigail Rachel', price: 7000, img: 'https://raw.githubusercontent.com/varhadoffc/tourl/main/uploads/2025-09-02/upload_1756832163623.jpg' },
+                
+            ];
+            const memberListContainer = document.getElementById('member-list');
+
+            members.forEach(member => {
+                const card = document.createElement('div');
+                card.className = 'glass-card group cursor-pointer overflow-hidden text-center relative';
+                card.innerHTML = `
+                    <img src="${member.img}" alt="${member.name}" class="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
+                        <h4 class="font-semibold text-white truncate">${member.name}</h4>
+                        <p class="text-sm text-gray-200">${formatRupiah(member.price)}</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button class="add-to-cart-btn text-white bg-pink-600 hover:bg-pink-700 py-2 px-4 rounded-lg font-semibold" data-id="${member.id}">
+                            <i class="fas fa-cart-plus mr-2"></i> Pesan
+                        </button>
+                    </div>
+                `;
+                memberListContainer.appendChild(card);
+            });
+
+            let cart = [];
+            const cartButton = document.getElementById('cart-button');
+            const cartCount = document.getElementById('cart-count');
+            const cartSidebar = document.getElementById('cart-sidebar');
+            const cartOverlay = document.getElementById('cart-overlay');
+            const closeCartBtn = document.getElementById('close-cart');
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalEl = document.getElementById('cart-total');
+            const emptyCartMsg = document.getElementById('empty-cart-message');
+            const checkoutButton = document.getElementById('checkout-button');
+
+            const toggleCart = () => {
+                cartSidebar.classList.toggle('translate-x-full');
+                cartOverlay.classList.toggle('hidden');
+            };
+
+            cartButton.addEventListener('click', toggleCart);
+            closeCartBtn.addEventListener('click', toggleCart);
+            cartOverlay.addEventListener('click', toggleCart);
+
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const memberId = parseInt(e.target.dataset.id);
+                    const member = members.find(m => m.id === memberId);
+                    
+                    if(member && !cart.some(item => item.id === memberId)) {
+                        cart.push(member);
+                        showToast(`Ditambahkan: ${member.name}`);
+                    } else if (cart.some(item => item.id === memberId)) {
+                        showToast(`${member.name} sudah ada di keranjang.`, 'info');
+                    }
+                    updateCart();
+                });
+            });
+
+            function updateCart() {
+                if (cart.length > 0) {
+                    cartCount.textContent = cart.length;
+                    cartCount.classList.remove('hidden');
+                    emptyCartMsg.classList.add('hidden');
+                    checkoutButton.disabled = false;
+                } else {
+                    cartCount.classList.add('hidden');
+                    emptyCartMsg.classList.remove('hidden');
+                    checkoutButton.disabled = true;
+                }
+
+                cartItemsContainer.innerHTML = '';
+                cart.forEach(item => {
+                    const itemEl = document.createElement('div');
+                    itemEl.className = 'flex justify-between items-center mb-4 p-2 rounded-lg bg-gray-800';
+                    itemEl.innerHTML = `
+                        <div class="flex items-center">
+                            <img src="${item.img}" alt="${item.name}" class="w-12 h-16 object-cover rounded-md mr-4">
+                            <div>
+                                <p class="font-semibold">${item.name}</p>
+                                <p class="text-sm text-gray-400">${formatRupiah(item.price)}</p>
+                            </div>
+                        </div>
+                        <button class="remove-from-cart-btn text-red-500 hover:text-red-400 text-lg" data-id="${item.id}">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    `;
+                    cartItemsContainer.appendChild(itemEl);
+                });
+
+                const total = cart.reduce((sum, item) => sum + item.price, 0);
+                cartTotalEl.textContent = formatRupiah(total);
+                
+                document.querySelectorAll('.remove-from-cart-btn').forEach(button => {
+                    button.addEventListener('click', e => {
+                        const memberId = parseInt(e.currentTarget.dataset.id);
+                        cart = cart.filter(item => item.id !== memberId);
+                        const removedMember = members.find(m => m.id === memberId);
+                        showToast(`Dihapus: ${removedMember.name}`, 'error');
+                        updateCart();
+                    });
+                });
+            }
+            
+            checkoutButton.addEventListener('click', () => {
+                if (cart.length === 0) return;
+
+                const waNumber = "6283115376765";
+                let message = "Halo Kak Nugget, saya mau pesan PM JKT48 untuk:\n\n";
+                cart.forEach(item => {
+                    message += `- ${item.name} (${formatRupiah(item.price)})\n`;
+                });
+                const total = cart.reduce((sum, item) => sum + item.price, 0);
+                message += `\nTotal: *${formatRupiah(total)}*`;
+                message += `\nMetode Pembayaran: *GOPAY*`;
+                message += `\n\nTerima kasih!`;
+                
+                const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+                window.open(waUrl, '_blank');
+            });
+
+            function formatRupiah(number) {
+                return new Intl.NumberFormat('id-ID', {
+                    style: 'currency',
+                    currency: 'IDR',
+                    minimumFractionDigits: 0
+                }).format(number);
+            }
+
+            function showToast(message, type = 'success') {
+                const toast = document.createElement('div');
+                let bgColor = 'bg-green-500';
+                if(type === 'error') bgColor = 'bg-red-500';
+                if(type === 'info') bgColor = 'bg-blue-500';
+
+                toast.className = `${bgColor} text-white py-2 px-4 rounded-lg shadow-lg fixed top-20 left-1/2 -translate-x-1/2 z-50 animate-fade-in-down`;
+                toast.textContent = message;
+                document.body.appendChild(toast);
+                setTimeout(() => {
+                    toast.remove();
+                }, 3000);
+            }
+
+            const sections = document.querySelectorAll('.fade-in-section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes blob {
+                    0% { transform: translate(0px, 0px) scale(1); }
+                    33% { transform: translate(30px, -50px) scale(1.1); }
+                    66% { transform: translate(-20px, 20px) scale(0.9); }
+                    100% { transform: translate(0px, 0px) scale(1); }
+                }
+                .animate-blob {
+                    animation: blob 7s infinite;
+                }
+                .animation-delay-2000 { animation-delay: 2s; }
+                .animation-delay-4000 { animation-delay: 4s; }
+                
+                @keyframes fade-in-down {
+                    from { opacity: 0; transform: translate(-50%, -20px); }
+                    to { opacity: 1; transform: translate(-50%, 0); }
+                }
+                .animate-fade-in-down {
+                    animation: fade-in-down 0.5s ease;
+                }
+            `;
+            document.head.appendChild(style);
+
+        });
+    </script>
+</body>
+</html>
